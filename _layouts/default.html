@@ -110,7 +110,7 @@ layout: table_wrappers
               {%- if item == node.title -%}
                 {{ node.url }}
                 {{ absolute_url }}
-                {%- assign node_url node.url | absolute_url -%}
+                {%- assign node_url = node.url | absolute_url -%}
                 {%- assign urls = urls | append: node_url -%}
                 {%- assign urls = urls | append: "*" -%}
               {%- endif -%}
