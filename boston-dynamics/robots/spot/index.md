@@ -1,13 +1,12 @@
 ---
-title: Hardware
+title: Spot
 parents:
-  - Spot
   - Robots
   - Boston Dynamics
-parent: Spot
+parent: Robots
 has_children: true
 nav_order: 1
-permalink: /boston-dynamics/robots/spot/hardware
+permalink: /boston-dynamics/robots/spot
 ---
 
-# Hardware
+# Spot
