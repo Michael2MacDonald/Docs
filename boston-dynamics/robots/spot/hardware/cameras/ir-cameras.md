@@ -6,8 +6,8 @@ parents:
   - Spot
   - Robots
   - Boston Dynamics
-parent: Hardware
-has_children: true
+parent: Cameras
+has_children: false
 nav_order: 1
 permalink: /boston-dynamics/robots/spot/hardware/cameras/ir-cameras
 ---
