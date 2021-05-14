@@ -108,8 +108,6 @@ layout: table_wrappers
             {%- assign i = i | plus: 1 -%}
             {%- for node in pages_list -%}
               {%- if item == node.title -%}
-                {{ node.url }}
-                {{ absolute_url }}
                 {%- assign node_url = node.url | absolute_url -%}
                 {%- assign urls = urls | append: node_url -%}
                 {%- assign urls = urls | append: "*" -%}
