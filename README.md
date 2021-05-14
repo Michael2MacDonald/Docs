@@ -1,23 +1,27 @@
-# OSAB Docs
+# Recursive Just-The-Docs
 
-Add this to the top of every page and make sure to edit it for each page!
+I wanted a recursive just-the-docs menu so I could have more than just 2 or 3 levels in my nav tree so I made it real!
+
+This code is by no means ready to merge with the main just-the-docs repo but it works and is 90% there. I hope that someone takes my code and makes it a little more professional (I am only a 16yo so I don't have the best code lol) and adds it to the official just-the-docs repo.
+
+## How to use the recursive feature
+It is important to set the parent variable for each page like before but you dont have to set the grand_parrent variable. instead you set the parents variable. the parents variable is an array with the names of all of the parents/grand parents/great grand parents/etc. Right now you have to list them in order from the parent first and the oldest grand parent last but that will later change as this arrangement means that you have to later reverse the array order in the code.
+
+### Ex:
+If I have a page called cameras and this is its location in the tree:
+/Boston Dynamics/Robots/Spot/Hardware/Cameras
+This is what the file would look like:
 ```
 ---
-title: [Title]                            # This is the page title
-has_children: [true | false]              # This makes it its own dropdown section in the navbar
-parent: [Title of parent]                 # Set this as the section it is in if you want the page to be under a section
-grand_parent: [Title of grand parent]     # Set this as the section its section is in if its section is in a section (ex: Vessels->Miine->Firmware you would set Vessels as the grand parent for Firmware)
-nav_order: [Number]                       # This is the page's possition in the nav bar or navbar section
-permalink: [Path]                         # This is the link of the page (ex: /vessels/miine/ would be https://docs.osab.xyz/vessels/miine/)
----
-```
-For example, if I have a page named Miine that should be under the Vessels section and is its own section I would do this:
-```
----
-title: Miine 
-has_children: true          # this line makes it its own section
-parent: Vessels             # this line makes part of the Vessels section
-nav_order: 1                # this makes it the first link under the Vessels section
-permalink: /vessels/miine/  # this makes its link https://docs.osab.xyz/vessels/miine/
+title: Cameras
+parents:
+  - Hardware
+  - Spot
+  - Robots
+  - Boston Dynamics
+parent: Hardware
+has_children: true
+nav_order: 1
+permalink: /boston-dynamics/robots/spot/hardware/cameras
 ---
 ```
